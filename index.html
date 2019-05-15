@@ -14,12 +14,12 @@
 <script type="text/javascript">
     $('button').on('click', function(){
         var x = $(this).data("animal");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+x+"&api_key=";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+x+"&api_key=MxnLV5kR63nHOzzmJChyjmne0HSEmZs2";
 
         $.ajax({url:queryURL, method:"GET"})
             .done(function(response){
                 for(var i=0;i<response.data.length;i++){
-                    var animalDiv = $('<div');
+                    var animalDiv = $('<div>');
                     var p = $('<p>').text("Rating: "+response.data[i].rating);
                     var animalImage = $('<img>');
                     animalImage.attr('src', response.data[i].images.fixed_height.url);
