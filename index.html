@@ -9,6 +9,8 @@
 <button data-animal="lion">Lion</button>
 <button data-animal="panther">Panther</button>
 <button data-animal="bear">Bear</button>
+<button data-animal="wolf">Wolf</button>
+<button data-animal="dragon">Dragon</button>
 
 <div id="gifs"></div>
 
@@ -26,7 +28,7 @@
                     animalImage.attr('src', response.data[i].images.fixed_height.url);
                     animalDiv.append(p);
                     animalDiv.append(animalImage);
-                    $('#gifs').append(animalDiv);
+                    $('#gifs').prepend(animalDiv);
                 }
             })
     })
