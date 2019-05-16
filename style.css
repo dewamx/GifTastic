@@ -5,3 +5,11 @@ body {
 p {
     color: #680404;
 }
+
+.navbar-brand {
+    color: #680404;
+}
+
+.btn-danger {
+    color:#000000;
+}
