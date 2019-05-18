@@ -5,6 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="C:\Users\raxem\Desktop\giftastic\GifTastic\app.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -14,35 +15,15 @@
         </div>
     </div>
 </nav>
-<button type="button" class=".btn btn-danger" data-animal="lion">Lion</button>
-<button type="button" class=".btn btn-danger" data-animal="panther">Panther</button>
-<button type="button" class=".btn btn-danger" data-animal="bear">Bear</button>
-<button type="button" class=".btn btn-danger" data-animal="wolf">Wolf</button>
-<button type="button" class=".btn btn-danger" data-animal="dragon">Dragon</button>
+
+<div id="animal-button">123</div>
+
+<br><input id="searchbar" type="text"  value="search"><br>
 
 <div id="gifs"></div>
 
-<script type="text/javascript">
-    $('button').on('click', function(){
-        var x = $(this).data("animal");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q="+x+"&api_key=MxnLV5kR63nHOzzmJChyjmne0HSEmZs2";
-
-        $.ajax({url:queryURL, method:"GET"})
-            .done(function(response){
-                for(var i=0;i<response.data.length;i++){
-                    var animalDiv = $('<div>');
-                    var p = $('<p>').text("Rating: "+response.data[i].rating);
-                    var animalImage = $('<img>');
-                    animalImage.attr('src', response.data[i].images.fixed_height.url);
-                    animalDiv.append(p);
-                    animalDiv.append(animalImage);
-                    $('#gifs').prepend(animalDiv);
-                }
-            })
-    })
 
 
-</script>
 
 </body>
 </html>

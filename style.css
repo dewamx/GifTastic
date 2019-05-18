@@ -12,4 +12,11 @@ p {
 
 .btn-danger {
     color:#000000;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+#animal-button {
+    width: 50px;
+    height: 20px;
 }
