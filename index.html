@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>GifTastic</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="C:\Users\raxem\Desktop\giftastic\GifTastic\app.js"></script>
+
 </head>
+
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-             <a class="navbar-brand" href="#">GifTastic</a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">GifTastic</a>
+            </div>
+        </div>
+    </nav>
+    <div container>
+        <div class="search">
+            <form>
+                <label for="searches" id="label">input animal name</label>
+                <input type="text" id="searches">
+                <input type="submit" id="go" value="launch">
+            </form>
+        </div>
+        <div class="row" id="butto"></div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="gif" id="gifs"></div>
+                <div class=row>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-
-<div id="animal-button">123</div>
-
-<br><input id="searchbar" type="text"  value="search"><br>
-
-<div id="gifs"></div>
-
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
